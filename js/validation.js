@@ -31,7 +31,7 @@ if (typeof jQuery === 'undefined') {
 
 		if($(this).length > 1) {
 			throw new Error('폼 요소가 2개 이상 발견되었습니다.');
-		} else if($(this).lenth === 0) {
+		} else if($(this).length === 0) {
 			throw new Error('폼 요소가 존재하지 않습니다.');
 		}
 
