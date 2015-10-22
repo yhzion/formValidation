@@ -19,7 +19,11 @@ if (typeof jQuery === 'undefined') {
 
 +function($) {
 
-	$.fn.formValidation = function() {
+	$.fn.formValidation = function(options) {
+
+		var settings = $.extend({
+			submit: "true"
+		}, options);
 
 		console.time('Form validation');
 
@@ -27,7 +31,7 @@ if (typeof jQuery === 'undefined') {
 				'$obj':'',
 				'fn':'',
 				'msg':''
-		}; /*리턴 오브젝트*/
+		};
 
 		if($(this).length > 1) {
 			throw new Error('폼 요소가 2개 이상 발견되었습니다.');
@@ -196,12 +200,15 @@ if (typeof jQuery === 'undefined') {
 			if(result.fn !== undefined && $.trim(result.fn) !== '') {
 				eval(result.fn);
 			}
+
+			return false;
 		} else {
-			$(this)[0].submit();
+			if(settings.submit) {
+				$(this)[0].submit();
+			}
+			return true;
 		}
 
 		console.timeEnd('Form validation');
-
-		return $(this);
 	};
 }(jQuery);
