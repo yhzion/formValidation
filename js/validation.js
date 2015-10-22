@@ -86,7 +86,7 @@ if (typeof jQuery === 'undefined') {
 				}
 			};
 
-		var $t = $(this).find('input[data-label],textarea[data-label]');
+		var $t = $(this).find('input[data-label],textarea[data-label],select[data-label]');
 
 		$t.each(function(){
 
@@ -113,7 +113,12 @@ if (typeof jQuery === 'undefined') {
 			/* 필수입력체크 true*/
 			if(essl === true && $.trim($(this).val())==='') {
 				result.$obj = $(this);
-				result.msg = label + ' 은(는) 필수입력항목입니다.';
+				if($(this)[0].tagName.toLowerCase() === 'select') {
+					result.msg = label + ' 은(는) 필수선택항목입니다.';
+				} else {
+					result.msg = label + ' 은(는) 필수입력항목입니다.';
+				}
+
 			}
 			/* 필수입력체크 false */
 			else if((essl !== false || essl === undefined)
