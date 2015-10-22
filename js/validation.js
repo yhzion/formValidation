@@ -18,11 +18,11 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 +function($) {
-	
+
 	$.fn.formValidation = function() {
 
 		console.time('Form validation');
-		
+
 		var result = {
 				'$obj':'',
 				'fn':'',
@@ -34,7 +34,7 @@ if (typeof jQuery === 'undefined') {
 		} else if($(this).lenth === 0) {
 			throw new Error('폼 요소가 존재하지 않습니다.');
 		}
-		
+
 		var validationPreset = {
 				'number' : function(val) {
 					//console.log('숫자 검증');
@@ -53,16 +53,16 @@ if (typeof jQuery === 'undefined') {
 				},
 				'email' : function(val) {
 					//console.log('이메일 검증');
-					var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i; 
+					var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 					if(!regExp.test(val)) {
 						return '이(가) 이메일 형식에 맞지 않습니다.';
 					}
 					else return '';
-					
+
 				},
 				'yyyymmdd' : function(val) {
 					//console.log('날짜 검증(YYYYMMDD)');
-					var regExp = /^\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])$/; 
+					var regExp = /^\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])$/;
 					if(!regExp.test(val)) {
 						return '이(가) 날짜(YYYYMMDD) 형식에 맞지 않습니다.';
 					}
@@ -70,7 +70,7 @@ if (typeof jQuery === 'undefined') {
 				},
 				'yyyy-mm-dd' : function(val) {
 					//console.log('날짜 검증(YYYY-MM-DD)');
-					var regExp = /^\d{4}[\/\-](0[1-9]|1[012])[\/\-](0[1-9]|[12][0-9]|3[01])$/; 
+					var regExp = /^\d{4}[\/\-](0[1-9]|1[012])[\/\-](0[1-9]|[12][0-9]|3[01])$/;
 					if(!regExp.test(val)) {
 						return '이(가) 날짜(YYYY-MM-DD) 형식에 맞지 않습니다.';
 					}
@@ -87,7 +87,7 @@ if (typeof jQuery === 'undefined') {
 			};
 
 		var $t = $(this).find('input[data-label],textarea[data-label]');
-		
+
 		$t.each(function(){
 
 			var val = $(this).data('val');
@@ -96,7 +96,7 @@ if (typeof jQuery === 'undefined') {
 			var essl = $(this).data('essl');
 			var fn = $(this).data('fn');
 			var maxlength = $(this).attr('maxlength');
-			
+
 			/*
 			console.log('val : ',val);
 			console.log('regexp : ',regexp);
@@ -105,30 +105,30 @@ if (typeof jQuery === 'undefined') {
 			console.log('essl : ',essl);
 			console.log('maxlength : ',maxlength);
 			*/
-			
+
 			if(($.trim(label) === '')) {
 				throw new Error('data-label attribute의 값이 존재해야 합니다.');
 			}
-			
+
 			/* 필수입력체크 true*/
 			if(essl === true && $.trim($(this).val())==='') {
 				result.$obj = $(this);
 				result.msg = label + ' 은(는) 필수입력항목입니다.';
-			} 
+			}
 			/* 필수입력체크 false */
-			else if((essl !== false || essl === undefined) 
+			else if((essl !== false || essl === undefined)
 					&& $.trim($(this).val())==='') {
 				return true;
-			} 
+			}
 			/* Data validation 수행*/
 			else {
 				/* Preset 검증 */
-				if((regexp === undefined || regexp === '') && val !== undefined) { 
+				if((regexp === undefined || regexp === '') && val !== undefined) {
 
 					//console.log('프리셋 검증 : ',val);
-					
+
 					var fn = validationPreset[val];
-					
+
 					if(val !=='' && typeof fn === 'function') {
 						var m = fn($(this).val());
 						if($.trim(m) !== '') {
@@ -158,9 +158,9 @@ if (typeof jQuery === 'undefined') {
 					    for(b=i=0;c=s.charCodeAt(i++);b+=c>>11?3:c>>7?2:1);
 					    return b
 					})($(this).val());
-					
+
 					//console.log('String byte length : ', stringByteLength);
-					
+
 					if(parseInt(stringByteLength) > parseInt(maxlength)) {
 						/* 검증 대상 오브젝트 */
 						result.$obj = $(this);
@@ -169,34 +169,34 @@ if (typeof jQuery === 'undefined') {
 					}
 				}
 			}
-			
+
 			/* 검증 결과 메세지가 존재하는 경우 each 루프를 빠져나옴 */
 			if($.trim(result.msg) != '') {
-				
+
 				result.fn = fn;
-				
+
 				//console.log(result);
-				
+
 				return false;
 			}
 		});
-		
+
 		if($.trim(result.msg) != '') {
-			
+
 			console.log(result);
-			
+
 			alert(result.msg);
 			result.$obj.focus();
-			
+
 			if(result.fn !== undefined && $.trim(result.fn) !== '') {
 				eval(result.fn);
 			}
 		} else {
 			$(this)[0].submit();
 		}
-		
+
 		console.timeEnd('Form validation');
-		
+
 		return $(this);
 	};
 }(jQuery);
