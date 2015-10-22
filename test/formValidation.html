@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="JEON YOUNG HO">
+		<meta name="Keywords" content="Form Validation">
+		<meta name="Description" content="JQuery Form Validation Plug-in test">
+		<title>Form Validation Test</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="../js/validation.js"></script>
+		<script>
+			function doSubmit() {
+				$('#f').formValidation();
+			}
+		</script>
+		<style>
+			body {
+				font-family: "맑은 고딕", "Malgun Gothic","Apple SD Gothic Neo", "돋움", dotum, Arial,sans-serif;
+			}
+
+			td {
+				border-bottom: 1px solid #000;
+				padding: 5px;
+			}
+			th {
+				border-top: 1px solid #000;
+				border-bottom: 1px solid #000;
+				background-color: #eee;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body onsubmit="return false;">
+		<h1>Form Validation Plug-in Usage Sample</h1>
+		<form id='f' method="post">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<th>Preset Name</th>
+						<th>Field</th>
+						<th>Essential</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>number</td>
+						<td>필드1&nbsp;<input type="text" data-label="필드1" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>숫자형식</td>
+					</tr>
+					<tr>
+						<td>phone</td>
+						<td>필드2&nbsp;<input type="text" data-label="필드2" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>전화번호</td>
+					</tr>
+					<tr>
+						<td>email</td>
+						<td>필드3&nbsp;<input type="text" data-label="필드3" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>이메일</td>
+					</tr>
+					<tr>
+						<td>yyyymmdd</td>
+						<td>필드4&nbsp;<input type="text" data-label="필드4" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>날짜형식(YYYYMMDD)</td>
+					</tr>
+					<tr>
+						<td>yyyy-mm-dd</td>
+						<td>필드5&nbsp;<input type="text" data-label="필드5" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>날짜형식(YYYY-MM-DD)</td>
+					</tr>
+					<tr>
+						<td>yyyy</td>
+						<td>필드6&nbsp;<input type="text" data-label="필드6" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>연도형식(YYYY)</td>
+					</tr>
+					<tr>
+						<td>-</td>
+						<td>필드7&nbsp;<input type="text" data-label="필드7" data-essl="true" data-val="number" maxlength="3"/></td>
+						<td>true</td>
+						<td>정규식 체크 ^\d{4}$</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th colspan="4">
+							<button type="submit" onclick="doSubmit();">submit</button>
+						</th>
+					</tr>
+				</tfoot>
+			</table>
+		</form>
+	</body>
+</html>
