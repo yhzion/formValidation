@@ -42,27 +42,33 @@ Add attributes into form element for validation
 
 > For required fields
 ~~~~html
-<input type="text" name="inputField_1" data-label="Name" data-essl="true">
+<input type="text" name="inputField_1" data-label="label_1" data-essl="true">
 ~~~~
 
 > For value validation
 ~~~~html
 <!-- Number -->
-<input type="text" name="inputField_2" data-label="Age" data-val="number">
+<input type="text" name="inputField_1" data-label="label_1" data-val="number">
 <!-- Date(YYYYMMDD) -->
-<input type="text" name="inputField_2" data-label="Age" data-val="yyyymmdd">
+<input type="text" name="inputField_2" data-label="label_2" data-val="yyyymmdd">
 <!-- Date(YYYY-MM-DD) -->
-<input type="text" name="inputField_2" data-label="Age" data-val="yyyy-mm-dd">
+<input type="text" name="inputField_3" data-label="label_3" data-val="yyyy-mm-dd">
 <!-- Date(YYYY) -->
-<input type="text" name="inputField_2" data-label="Age" data-val="yyyy">
+<input type="text" name="inputField_4" data-label="label_4" data-val="yyyy">
 <!-- Phone  -->
-<input type="text" name="inputField_2" data-label="Age" data-val="phone">
+<input type="text" name="inputField_5" data-label="label_5" data-val="phone">
 ~~~~
 
 > For maxLength(byte) check
+~~~~html
+<input type="text" name="inputField_1" data-label="label_1" maxlength="30">
+~~~~
 
 > Use Regular Expression
-
+~~~~html
+<!-- f data-regex and data-val is used at the same time, the regular expression will take precedence.-->
+<input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
+~~~~
 
 ##configuration
 
