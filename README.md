@@ -77,7 +77,7 @@ Add attributes into form element for validation
 ~~~~
 
 The **data-label** is essential attribute. It may be used in combination with the remaining attributes. If verification errors are found, it gives the alert notification, otherwise automatically performs a form submit. To prevent form submit automatically, it gives the option like this.
-~~~~html
+~~~~javascript
 function doSubmit() {
   
   var form = document.form;
