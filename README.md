@@ -71,7 +71,7 @@ Add attributes into form element for validation
 <input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
 ~~~~
 
-> - Excute function after validation error found
+> - Execute function after validation error found
 ~~~~html
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true" data-fn="doSomeThing()">
 ~~~~
