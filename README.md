@@ -1,9 +1,9 @@
 #jquery.formValidation
 
-#Installation
+##Installation
 
-#Usage
+##Usage
 
-#configuration
+##configuration
 
-#Authors
+##Authors
