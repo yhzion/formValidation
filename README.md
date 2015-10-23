@@ -40,7 +40,7 @@ function doSubmit() {
 
 Add attributes into form element for validation
 
-> For required fields
+> - For required fields
 ~~~~html
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true">
 ~~~~
@@ -59,14 +59,15 @@ Add attributes into form element for validation
 <input type="text" name="inputField_5" data-label="label_5" data-val="phone">
 ~~~~
 
-> For maxLength(byte) check
+> - For maxLength(byte) check
 ~~~~html
 <input type="text" name="inputField_1" data-label="label_1" maxlength="30">
 ~~~~
 
-> Use Regular Expression
+> - Use Regular Expression
 ~~~~html
-<!-- f data-regex and data-val is used at the same time, the regular expression will take precedence.-->
+<!-- [data-regex] and [data-val] is used at the same time,-->
+<!--  the regular expression will take precedence.-->
 <input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
 ~~~~
 
