@@ -41,12 +41,12 @@ function doSubmit() {
 Add attributes into form element for validation
 
 > - For required fields
-~~~~javascript
+~~~~html
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true">
 ~~~~
 
 > - For value validation
-~~~~javascript
+~~~~html
 <!-- Number -->
 <input type="text" name="inputField_1" data-label="label_1" data-val="number">
 <!-- Date(YYYYMMDD) -->
@@ -60,12 +60,12 @@ Add attributes into form element for validation
 ~~~~
 
 > - For maxLength(byte) check
-~~~~javascript
+~~~~html
 <input type="text" name="inputField_1" data-label="label_1" maxlength="30">
 ~~~~
 
 > - Use Regular Expression
-~~~~javascript
+~~~~html
 <!-- [data-regex] and [data-val] is used at the same time,-->
 <!--  the regular expression will take precedence.-->
 <input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
