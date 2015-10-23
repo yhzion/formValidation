@@ -4,14 +4,14 @@ This plugin is optimized for *Korean* language.
 
 ##Installation
 Include script *after* the jQuery library (unless you are packaging scripts somehow else):
-~~~~html
+```html
 <script src="/path/to/jquery.validation.js"></script>
-~~~~
+```
 **Do not include the script directly from GitHub.** The file is being served as text/plain and as such being blocked in some browsers. GitHub is not a CDN.
 
 ##Usage
 Change function like this for submit or create new **doSubmit** function when is not exist.
-~~~~javascript
+```javascript
 //Before
 function doSubmit() 
   var form = document.form;
@@ -28,25 +28,25 @@ function doSubmit()
   
   form.submit();
 }
-~~~~
-~~~~javascript
+```
+```javascript
 //After
 function doSubmit() {
   var form = document.form;
   $(form).formValidation();
 }
-~~~~
+```
 
 
-Add attributes into form element for validation
+Add attributes into form element for validation.
 
 > - For required fields
-~~~~html
+```html
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true">
-~~~~
+```
 
 > - For value validation
-~~~~html
+```html
 <!-- Number -->
 <input type="text" name="inputField_1" data-label="label_1" data-val="number">
 <!-- Date(YYYYMMDD) -->
@@ -59,37 +59,37 @@ Add attributes into form element for validation
 <input type="text" name="inputField_5" data-label="label_5" data-val="phone">
 <!-- Email  -->
 <input type="text" name="inputField_6" data-label="label_6" data-val="email">
-~~~~
+```
 
 > - For length(byte) check
-~~~~html
+```html
 <input type="text" name="inputField_1" data-label="label_1" maxlength="30">
-~~~~
+```
 
 > - Use Regular Expression
-~~~~html
+```html
 <!-- [data-regex] and [data-val] is used at the same time,-->
 <!-- the regular expression will take precedence.-->
 <input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
-~~~~
+```
 
 > - Execute function after validation error found
-~~~~html
+```html
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true" data-fn="doSomething()">
-~~~~
+```
 
 > - Attributes Specification
 
 > | Attributes | Required | Description |
-| :--------- | :------: | :---------- |
-|data-label|●|For display validation messages(Alert)|
-|data-essl||Required field (true or false)|
-|data-val||[Validation preset](#validation-presets)|
-|maxlength||Byte length check for UTF-8 characters|
-|data-fn||Execute function after validation error found|
+> | :--------- | :------: | :---------- |
+> |data-label|●|For display validation messages(Alert)|
+> |data-essl||Required field (true or false)|
+> |data-val||[Validation preset](#validation-presets)|
+> |maxlength||Byte length check for UTF-8 characters|
+> |data-fn||Execute function after validation error found|
 
 The **data-label** is essential attribute. It may be used in combination with the remaining attributes. If verification errors are found, it gives the alert notification, otherwise automatically performs a form submit. To prevent form submit automatically, you can gives the option like this.
-~~~~javascript
+```javascript
 function doSubmit() {
   
   var form = document.form;
@@ -105,7 +105,7 @@ function doSubmit() {
     //to do something...
   }
 }
-~~~~
+```
 
 ##Validation Presets
 | Presets  | Regular Expression |
