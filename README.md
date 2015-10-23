@@ -57,6 +57,8 @@ Add attributes into form element for validation
 <input type="text" name="inputField_4" data-label="label_4" data-val="yyyy">
 <!-- Phone  -->
 <input type="text" name="inputField_5" data-label="label_5" data-val="phone">
+<!-- Email  -->
+<input type="text" name="inputField_6" data-label="label_6" data-val="email">
 ~~~~
 
 > - For length(byte) check
@@ -97,12 +99,13 @@ function doSubmit() {
 
 ##Validation Presets
 | Presets  | Regular Expression |
-| :------: | :----------------: |
-|number||
-|yyyymmdd||
-|yyyy-mm-dd||
-|yyyy||
-|phone||
+| :------- | :----------------- |
+|number|/^\d*$/|
+|yyyymmdd|/^\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])$/|
+|yyyy-mm-dd|/^\d{4}[\/\-](0[1-9]|1[012])[\/\-](0[1-9]|[12][0-9]|3[01])$/|
+|yyyy|/^[12]{1}\d{3}$/|
+|phone|/^\d{2,3}-\d{3,4}-\d{4}$/|
+|email|/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i|
 
 
 ##Authors
