@@ -90,7 +90,7 @@ function doSubmit() {
   if(result) {
     form.submit();
   } else {
-    //do something...
+    //to do something...
   }
 }
 ~~~~
