@@ -59,7 +59,7 @@ Add attributes into form element for validation
 <input type="text" name="inputField_5" data-label="label_5" data-val="phone">
 ~~~~
 
-> - For maxLength(byte) check
+> - For length(byte) check
 ~~~~html
 <input type="text" name="inputField_1" data-label="label_1" maxlength="30">
 ~~~~
@@ -74,3 +74,6 @@ Add attributes into form element for validation
 ##configuration
 
 ##Authors
+JEON YOUNG HO
+gplusit@gmail.com
+If you have any questions, please contact us.
