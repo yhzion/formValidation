@@ -132,7 +132,7 @@ function doSubmit() {
 | ```textarea```             | ●         |
 | ```select```               | ●         |
 
-Now only the necessary parts were first developed. It may have many bugs. I will try make better.
+Now only the necessary parts were first developed. I have plans to increase the supported elements.
 
 ##Authors
 JEON YOUNG HO
