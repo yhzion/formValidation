@@ -107,7 +107,7 @@ function doSubmit() {
 }
 ~~~~
 
-##Validation Presets
+##[Validation Presets][presets]
 | Presets  | Regular Expression |
 | :------- | :----------------- |
 |number|```/^\d*$/```|
