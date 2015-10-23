@@ -76,7 +76,24 @@ Add attributes into form element for validation
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true" data-fn="doSomeThing()">
 ~~~~
 
-The **data-label** is essential attribute. It may be used in combination with the remaining attributes. If verification errors are found, it gives the alert notification, otherwise automatically performs a form submission.
+The **data-label** is essential attribute. It may be used in combination with the remaining attributes. If verification errors are found, it gives the alert notification, otherwise automatically performs a form submit. To prevent form submit automatically, it gives the option like this.
+~~~~html
+function doSubmit() {
+  
+  var form = document.form;
+  var options = {
+    'submit' : false
+  };
+  
+  var result = $(form).formValidation(options); // returns true or false
+  
+  if(result) {
+    form.submit();
+  } else {
+    //do some things...
+  }
+}
+~~~~
 
 ##configuration
 
