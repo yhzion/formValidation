@@ -40,7 +40,7 @@ function doSubmit() {
 
 Add attributes into form element for validation
 
-For essential element
+> For essential element
 
 ##configuration
 
