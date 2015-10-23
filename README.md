@@ -10,7 +10,7 @@ Include script *after* the jQuery library (unless you are packaging scripts some
 **Do not include the script directly from GitHub.** The file is being served as text/plain and as such being blocked in Internet Explorer on Windows 7 for instance (because of the wrong MIME type). Bottom line: GitHub is not a CDN.
 
 ##Usage
-- Change function like this for submit or create new **doSubmit** function when is not exist.
+Change function like this for submit or create new **doSubmit** function when is not exist.
 ~~~~javascript
 //Before
 function doSubmit() 
@@ -37,8 +37,11 @@ function doSubmit() {
 }
 ~~~~
 
-- Add attributes into form element for validation
-For Essential Element
+
+Add attributes into form element for validation
+
+For essential element
+
 ##configuration
 
 ##Authors
