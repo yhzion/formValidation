@@ -139,5 +139,5 @@ JEON YOUNG HO
 
 gplusit@gmail.com
 
-If you have any questions, please contact us.
+If you have any questions, please contact me.
 
