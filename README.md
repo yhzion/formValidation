@@ -84,7 +84,7 @@ Add attributes into form element for validation
 | :--------- | :------: | :---------- |
 |data-label|●|For display validation messages(Alert)|
 |data-essl||Required field (true or false)|
-|data-val||Validation preset|
+|data-val||[Validation preset](#markdown-header-validation-presets)|
 |maxlength||Byte length check for UTF-8 characters|
 |data-fn||Execute function after validation error found|
 
@@ -107,7 +107,7 @@ function doSubmit() {
 }
 ~~~~
 
-##[Validation Presets](/preset/)
+##Validation Presets
 | Presets  | Regular Expression |
 | :------- | :----------------- |
 |number|```/^\d*$/```|
