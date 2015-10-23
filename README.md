@@ -81,10 +81,10 @@ The **data-label** is essential attribute. It may be used in combination with th
 function doSubmit() {
   
   var form = document.form;
+  
   var options = {
     'submit' : false
   };
-  
   var result = $(form).formValidation(options); // returns true or false
   
   if(result) {
@@ -95,7 +95,7 @@ function doSubmit() {
 }
 ~~~~
 
-##configuration
+##Validation Presets
 
 
 ##Authors
