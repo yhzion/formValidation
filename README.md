@@ -1,2 +1,9 @@
-# formValidation
-JQuery Form Validation Plug-in
+#jquery.formValidation
+
+#Installation
+
+#Usage
+
+#configuration
+
+#Authors
