@@ -80,6 +80,17 @@ Add attributes into form element for validation.
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true" data-fn="doSomething()">
 ```
 
+> - Supported Element
+
+> | Elements                   | Support   |
+> | ----------                 | :-------: |
+> | ```input[type=text]```     | ●         |
+> | ```input[type=radio]```    |           |
+> | ```input[type=checkbox]``` |           |
+> | ```input[type=hidden]```   |           |
+> | ```textarea```             | ●         |
+> | ```select```               | ●         |
+
 > - Attributes Specification
 
 > | Attributes | Required | Description                                   |
