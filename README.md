@@ -80,17 +80,6 @@ Add attributes into form element for validation.
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true" data-fn="doSomething()">
 ```
 
-> - Supported Element
-
-> | Elements                   | Support   |
-> | ----------                 | :-------: |
-> | ```input[type=text]```     | ●         |
-> | ```input[type=radio]```    |           |
-> | ```input[type=checkbox]``` |           |
-> | ```input[type=hidden]```   |           |
-> | ```textarea```             | ●         |
-> | ```select```               | ●         |
-
 > - Attributes Specification
 
 > | Attributes | Required | Description                                   |
@@ -131,6 +120,19 @@ function doSubmit() {
 |email|```/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i```|
 
 *jquery.validation.js* contains presets. The presets are used in addition or modify it to suit your project.
+
+##Supported Elements
+
+| Elements                   | Support   |
+| ----------                 | :-------: |
+| ```input[type=text]```     | ●         |
+| ```input[type=radio]```    |           |
+| ```input[type=checkbox]``` |           |
+| ```input[type=hidden]```   |           |
+| ```textarea```             | ●         |
+| ```select```               | ●         |
+
+Now only the necessary parts were first developed. It may have many bugs. I will try make better.
 
 ##Authors
 JEON YOUNG HO
