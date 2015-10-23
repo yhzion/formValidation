@@ -67,11 +67,14 @@ Add attributes into form element for validation
 > - Use Regular Expression
 ~~~~html
 <!-- [data-regex] and [data-val] is used at the same time,-->
-<!--  the regular expression will take precedence.-->
+<!-- the regular expression will take precedence.-->
 <input type="text" name="inputField_1" data-label="label_1" data-regexp="^\d{3}$">
 ~~~~
 
+The **data-label** is essential attribute. It may be used in combination with the remaining attributes. If verification errors are found, it gives the alert Notification, otherwise automatically performs a form submit.
+
 ##configuration
+
 
 ##Authors
 JEON YOUNG HO
