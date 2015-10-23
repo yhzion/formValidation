@@ -42,7 +42,8 @@ if (typeof jQuery === 'undefined') {
 		var validationPreset = {
 				'number' : function(val) {
 					//console.log('숫자 검증');
-					if(isNaN(val)) {
+					var regExp = /^\d*$/;
+					if(!regExp.test(val)) {
 						return '이(가) 숫자 형식에 맞지 않습니다.';
 					}
 					else return '';
