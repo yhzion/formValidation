@@ -7,7 +7,7 @@ Include script *after* the jQuery library (unless you are packaging scripts some
 ~~~~html
 <script src="/path/to/jquery.validation.js"></script>
 ~~~~
-**Do not include the script directly from GitHub.** The file is being served as text/plain and as such being blocked in some browsers. GitHub is not a CDN. :)
+**Do not include the script directly from GitHub.** The file is being served as text/plain and as such being blocked in some browsers. GitHub is not a CDN.
 
 ##Usage
 Change function like this for submit or create new **doSubmit** function when is not exist.
