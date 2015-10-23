@@ -107,6 +107,8 @@ function doSubmit() {
 |phone|```/^\d{2,3}-\d{3,4}-\d{4}$/```|
 |email|```/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i```|
 
+*jquery.validation.js* contains presets.
+The presets are used in addition of modify it to suit your project.
 
 ##Authors
 JEON YOUNG HO
