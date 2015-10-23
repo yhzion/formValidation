@@ -122,7 +122,5 @@ The presets are used in addition or modify it to suit your project.
 
 ##Authors
 JEON YOUNG HO
-
 gplusit@gmail.com
-
 If you have any questions, please contact us.
