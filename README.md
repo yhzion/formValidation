@@ -16,11 +16,11 @@ Change function like this for submit or create new **doSubmit** function when is
 function doSubmit() 
   var form = document.form;
   
-  if(form.inputElement1.value == '') {
-    alert('inputElement1 is empty!!');
+  if(form.inputField_1.value == '') {
+    alert('inputField_1 is empty!!');
     return;
-  } else if(form.inputElement2.value == '') {
-    alert('inputElement2 is empty!!');
+  } else if(form.inputField_2.value == '') {
+    alert('inputField_2 is empty!!');
     return;
   }
   
@@ -41,6 +41,9 @@ function doSubmit() {
 Add attributes into form element for validation
 
 > For required Fields
+~~~~html
+<input type="text" name="inputField_1" **data-label**="Name" **data-essl**="true">
+~~~~
 
 > For value validation
 
