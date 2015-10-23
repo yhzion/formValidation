@@ -45,7 +45,7 @@ Add attributes into form element for validation
 <input type="text" name="inputField_1" data-label="label_1" data-essl="true">
 ~~~~
 
-> For value validation
+> - For value validation
 ~~~~html
 <!-- Number -->
 <input type="text" name="inputField_1" data-label="label_1" data-val="number">
