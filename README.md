@@ -2,6 +2,9 @@
 A simple, lightweight jQuery plugin for form validation.
 This plugin is optimized for *Korean* language.
 
+##Demo
+View [simple example](http://yhzion.github.io/formValidation/formValidation.html) on git-hub pages
+
 ##Installation
 Include script *after* the jQuery library (unless you are packaging scripts somehow else):
 ```html
