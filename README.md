@@ -40,7 +40,10 @@ function doSubmit() {
 
 Add attributes into form element for validation
 
-> For essential element
+> For required Fields
+> For value validation
+> For maxLength(byte) check
+> Use Regular Expression
 
 ##configuration
 
