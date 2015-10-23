@@ -40,12 +40,24 @@ function doSubmit() {
 
 Add attributes into form element for validation
 
-> For required Fields
+> For required fields
 ~~~~html
-<input type="text" name="inputField_1" **data-label**="Name" **data-essl**="true">
+<input type="text" name="inputField_1" data-label="Name" data-essl="true">
 ~~~~
 
 > For value validation
+~~~~html
+<!-- Number -->
+<input type="text" name="inputField_2" data-label="Age" data-val="number">
+<!-- Date(YYYYMMDD) -->
+<input type="text" name="inputField_2" data-label="Age" data-val="yyyymmdd">
+<!-- Date(YYYY-MM-DD) -->
+<input type="text" name="inputField_2" data-label="Age" data-val="yyyy-mm-dd">
+<!-- Date(YYYY) -->
+<input type="text" name="inputField_2" data-label="Age" data-val="yyyy">
+<!-- Phone  -->
+<input type="text" name="inputField_2" data-label="Age" data-val="phone">
+~~~~
 
 > For maxLength(byte) check
 
